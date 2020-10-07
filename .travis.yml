@@ -2,13 +2,10 @@ language: cpp
 dist: trusty
 sudo: required
 
-arch:
-  - amd64
-  - ppc64le
-
 matrix:
   include:
     - compiler: gcc
+      arch: amd64
       addons:
         apt:
           sources:
@@ -20,6 +17,7 @@ matrix:
       before_install:
         - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 60 --slave /usr/bin/g++ g++ /usr/bin/g++-6
     - compiler: clang
+      arch: amd64
       addons:
         apt:
           sources:
