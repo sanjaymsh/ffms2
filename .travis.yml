@@ -2,6 +2,10 @@ language: cpp
 dist: trusty
 sudo: required
 
+arch:
+  - amd64
+  - ppc64le
+
 matrix:
   include:
     - compiler: gcc
